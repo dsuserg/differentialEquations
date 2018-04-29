@@ -25,7 +25,7 @@ endBorder_t_L = lambda t,x: 0               # Right border line u(t,x=L)
 
 pi=math.pi
 e=math.e
-ck=lambda k: 60/(k*pi)**3*(2-(k*pi)**2*(1+math.cos(k*pi)))
+ck=lambda k: 60/(k*pi)**3*(1-(k*pi)**2*(1+math.cos(k*pi)))
 analytic=lambda t,x,D,L: (0-30)*x/L+30+sum([math.sin(k*pi*x/L)*ck(k)*e**(-(k*pi)**2*D*t/L**2) for k in range(1,10)])
 
 
